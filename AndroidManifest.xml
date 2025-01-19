@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SET_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/patt"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/patt"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App"
+        tools:targetApi="31">
+
+        <!-- Main activity declaration -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Declare other activities -->
+        <activity android:name=".TasksActivity" android:exported="true"></activity>
+        <activity android:name=".RemindersActivity" android:exported="true"></activity>
+        <activity android:name=".ActivityLogActivity" android:exported="true"></activity>
+        <activity android:name=".AnalyticsActivity" android:exported="true"></activity>
+        <activity android:name=".NotesActivity" android:exported="true"></activity>
+        <activity android:name=".InfoActivity" android:exported="true"></activity>
+        <receiver android:name=".AlarmReceiver" android:enabled="true" android:exported="false"/>
+        <activity android:name=".PrivacyPolicyActivity"/>
+        <activity android:name=".TermsAndConditionsActivity"/>
+
+
+    </application>
+
+</manifest>

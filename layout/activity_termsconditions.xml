@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TermsAndConditionsActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/patt"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Logo"/>
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personalized Activity and Task Tracker"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_toEndOf="@id/logo"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <!-- Terms and Conditions content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/main"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/modernwhite">
+
+        <TextView
+            android:id="@+id/termsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="8dp"
+            android:padding="16dp"
+            android:text="Terms and Conditions\n\n1. Acceptance of Terms: By using this app, you agree to be bound by these terms and conditions.\n\n2. Privacy: We respect your privacy and do not share your personal data with third parties without consent.\n\n3. Usage: You agree to use the app only for lawful purposes and will not engage in any harmful activities.\n\n4. Limitation of Liability: The app is provided ‘as is’, and we do not guarantee its availability or functionality.\n\n5. Changes to Terms: We reserve the right to modify these terms at any time.\n\n6. Contact: For any questions, please contact us via email or phone."
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+    </ScrollView>
+
+    <!-- Footer with Social Media Links -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/secondary"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2024 PATT"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/facebook"
+                android:contentDescription="Facebook"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/instagram"
+                android:contentDescription="Instagram"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/whatsapp"
+                android:contentDescription="Whatsapp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/youtube"
+                android:contentDescription="YouTube"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

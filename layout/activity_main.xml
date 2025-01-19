@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/modernwhite"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/patt"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Logo"/>
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personalized Activity and Task Tracker"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_toEndOf="@id/logo"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:rowCount="3"
+        android:columnCount="2"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        android:padding="16dp"
+        android:background="@drawable/background"
+        android:gravity="center"
+        tools:ignore="NotSibling">
+
+        <!-- Tasks Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/ic_launcher_foreground"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/tasksImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/task3"
+                android:contentDescription="Task Icon"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tasks"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <!-- Reminders Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/ic_launcher_foreground"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/remindersImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/reminder4"
+                android:contentDescription="Reminders Icon"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reminders"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <!-- Activity Log Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/ic_launcher_foreground"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/activityLogImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/activitylog"
+                android:contentDescription="Activity Log Icon"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity Log"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <!-- Analytics Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/analyticsImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/analytics6"
+                android:contentDescription="Analytics Icon"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analytics"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <!-- Notes Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/ic_launcher_foreground"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/notesImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/notes6"
+                android:contentDescription="Notes Icon"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <!-- Settings Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/infoImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/infoicon"
+                android:contentDescription="Info Icon"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More Info"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+    </GridLayout>
+
+    <!-- Footer with Social Media Links -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/secondary"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2024 PATT"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/facebook"
+                android:contentDescription="Facebook"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/instagram"
+                android:contentDescription="Instagram"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/whatsapp"
+                android:contentDescription="Whatsapp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/youtube"
+                android:contentDescription="YouTube"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
